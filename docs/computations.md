@@ -7,7 +7,7 @@ The computations service provides a means to manage computations, with functions
 In order to create computation, we can to provide the following content:
 
 ```bash
-curl -sSiX POST https://prism.ultraviolet.rs/computations -H "Content-Type: application/json" -H "Authorization: Bearer <user_token>" -d @- << EOF
+curl -sSiX POST https://prism.ultraviolet.rs/computations/{domainID} -H "Content-Type: application/json" -H "Authorization: Bearer <user_token>" -d @- << EOF
 {
   "name": "<name>",
   "description": "<description>",
@@ -23,7 +23,7 @@ On the ui this can be done on this page as shown here
 Example:
 
 ```bash
-curl -sSiX POST https://prism.ultraviolet.rs/computations -H "Content-Type: application/json" -H "Authorization: Bearer <user_token>" -d @- << EOF
+curl -sSiX POST https://prism.ultraviolet.rs/computations/ -H "Content-Type: application/json" -H "Authorization: Bearer <user_token>" -d @- << EOF
 {
   "name": "Machine Diagnostics Analysis",
   "description": "Performing diagnostics analysis on machine data",
